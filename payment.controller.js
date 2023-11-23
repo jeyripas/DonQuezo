@@ -12,12 +12,12 @@ let delivery = null
 const linkImg = "http://localhost:3000"
 
 const transporter = nodemailer.createTransport({
-  host: 'smtpout.secureserver.net',
+  host: 'mx1.nubosfera.com',
   port: 465, // Puerto de SMTP
   secure: true,
   auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASSWORD,
+    user: "ventas@donquezo.com",
+    pass: "DGC6hY95g",
   },
 });
 
@@ -238,7 +238,7 @@ transporter.sendMail(mailOptions2, (error2, info2) => {
 
 export const createOrder = async (req, res) => {
   mercadopage.configure({
-    access_token: process.env.ACCESS_TOKEN,
+    access_token: "TEST-5274650811398292-111815-1bf735868bcad222053071c6f11bf7e6-1555878128"
   });
   const listItems = req.body.itemsArray
   const totalAmountInCents = listItems.reduce((total, item) => {
